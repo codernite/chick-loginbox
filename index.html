@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta charset="utf8">
+<link rel="stylesheet" href="style.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="move.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<head></head>
+<body class="body">
+<div class="parentdiv">
+<div class="mydiv">
+   <div class="left-eye" id="goz1">.</div>
+   <div class="right-eye" id="goz2">.</div>
+   <img src="eyeopen.png" class="profil" width="200px" id="chick" /><br>
+   <form class="form">
+   <label>ID</label><br>
+   <input type="text" id="kulad"><br>
+   <label>Password</label><br>
+   <input type="password"  id="pass" name="pass" required/>
+   <label class="btn btn-success" id="button">şifreyi göster</label>
+   </form>
+</div>
+</div>
+</body>
+
+
+<script>
+   var passinput = document.getElementById("pass");
+   passinput.onfocus = function () {
+ var passimg =  document.getElementById("chick");
+ var passgoz1 = document.getElementById("goz1").innerHTML="";
+ var passgoz2 = document.getElementById("goz2").innerHTML="";
+ passimg.setAttribute("src", "eyeshut.png");
+ passimg.setAttribute("width", "160px");
+ console.log("shut");
+   };
+   var passkulad = document.getElementById("kulad");
+   passkulad.onclick=function () {
+      var passimg =  document.getElementById("chick");
+      var passgoz1 = document.getElementById("goz1").innerHTML=".";
+ var passgoz2 = document.getElementById("goz2").innerHTML="."; 
+      passimg.setAttribute("src", "eyeopen.png");
+      passimg.setAttribute("width", "200px");
+   }
+</script>
+
+<script>
+var pasbuton = document.getElementById("button");
+
+pasbuton.onclick = function () {
+       var x = document.getElementById("pass");
+       if (x.type === "password") {
+    x.type = "text";
+    console.log("to text");
+  } else {
+    var passimg = document.getElementById("chick");
+    x.type = "password";
+    console.log("to password");
+    passimg.src = "eyeshut.png";
+    var passgoz1 = document.getElementById("goz1").innerHTML="";
+    console.log("eyes");
+  }
+       console.log('showhide');
+       var passimg = document.getElementById("chick");
+  passimg.setAttribute("src", "eyeshalf.png");
+  passimg.setAttribute("width", "160px");
+  var passgoz1 = document.getElementById("goz2").innerHTML=".";
+  
+  
+     }
+  </script>
+
+
+   
+
